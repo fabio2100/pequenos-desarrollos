@@ -1,0 +1,737 @@
+
+const grupoA = [
+    {
+        "seleccion":"Qatar",
+        "rankingFifa":1439,
+        "posicionRanking":50
+    },
+    {
+        "seleccion":"Ecuador",
+        "rankingFifa":1464,
+        "posicionRanking":44
+    },
+    {
+        "seleccion":"Senegal",
+        "rankingFifa":1584,
+        "posicionRanking":18
+    },
+    {
+        "seleccion":"Países Bajos",
+        "rankingFifa":1694,
+        "posicionRanking":8
+    }
+]
+const grupoB = [
+    {
+        "seleccion":"Inglaterra",
+        "rankingFifa":1728,
+        "posicionRanking":5
+    },
+    {
+        "seleccion":"Irán",
+        "rankingFifa":1564,
+        "posicionRanking":20
+    },{
+        "seleccion":"USA",
+        "rankingFifa":1627,
+        "posicionRanking":16
+    },
+    {
+        "seleccion":"Gales",
+        "rankingFifa":1569,
+        "posicionRanking":18
+    },
+]
+const grupoC = [
+    {
+        "seleccion":"Argentina",
+        "rankingFifa":1773,
+        "posicionRanking":3
+    },{
+        "seleccion":"Arabia Saudita",
+        "rankingFifa":1437,
+        "posicionRanking":51
+    },
+    {
+        "seleccion":"México",
+        "rankingFifa":1644,
+        "posicionRanking":13
+    },{
+        "seleccion":"Polonia",
+        "rankingFifa":1584,
+        "posicionRanking":26
+    },
+]
+const grupoD = [
+    {
+        "seleccion":"Francia",
+        "rankingFifa":1759,
+        "posicionRanking":4
+    },
+    {
+        "seleccion":"Australia",
+        "rankingFifa":1488,
+        "posicionRanking":38
+    },
+    {
+        "seleccion":"Dinamarca",
+        "rankingFifa":1666,
+        "posicionRanking":10
+    },{
+        "seleccion":"Tunez",
+        "rankingFifa":1507,
+        "posicionRanking":30
+    },
+]
+const grupoE = [
+    {
+        "seleccion":"España",
+        "rankingFifa":1715,
+        "posicionRanking":7
+    },{
+        "seleccion":"Costa Rica",
+        "rankingFifa":1503,
+        "posicionRanking":31
+    },
+    {
+        "seleccion":"Alemania",
+        "rankingFifa":1650,
+        "posicionRanking":11
+    },{
+        "seleccion":"Japón",
+        "rankingFifa":1559,
+        "posicionRanking":24
+    },
+]
+const grupoF = [
+    {
+        "seleccion":"Belgica",
+        "rankingFifa":1816,
+        "posicionRanking":2
+    },{
+        "seleccion":"Canada",
+        "rankingFifa":1475,
+        "posicionRanking":41
+    },
+    {
+        "seleccion":"Marruecos",
+        "rankingFifa":1563,
+        "posicionRanking":22
+    },{
+        "seleccion":"Croacia",
+        "rankingFifa":1645,
+        "posicionRanking":12
+    },
+]
+const grupoG = [
+    {
+        "seleccion":"Brasil",
+        "rankingFifa":1841,
+        "posicionRanking":1
+    },{
+        "seleccion":"Serbia",
+        "rankingFifa":1563,
+        "posicionRanking":21
+    },
+    {
+        "seleccion":"Suiza",
+        "rankingFifa":1635,
+        "posicionRanking":15
+    },{
+        "seleccion":"Camerun",
+        "rankingFifa":1471,
+        "posicionRanking":43
+    },
+]
+const grupoH = [
+    {
+        "seleccion":"Portugal",
+        "rankingFifa":1676,
+        "posicionRanking":9
+    },{
+        "seleccion":"Ghana",
+        "rankingFifa":1393,
+        "posicionRanking":61
+    },
+    {
+        "seleccion":"Uruguay",
+        "rankingFifa":1638,
+        "posicionRanking":14
+    },{
+        "seleccion":"Corea Del Sur",
+        "rankingFifa":1530,
+        "posicionRanking":28
+    },
+]
+
+const selecciones = [
+    {
+        "seleccion":"Qatar",
+        "rankingFifa":1439,
+        "posicionRanking":50,
+        "grupo":"A",
+        "pg":0,
+        "pe":0,
+        "pp":0,
+        "ptos":0,
+        "pj":0
+    },
+    {
+        "seleccion":"Ecuador",
+        "rankingFifa":1464,
+        "posicionRanking":44,
+        "grupo":"A",
+        "pg":0,
+        "pe":0,
+        "pp":0,
+        "ptos":0,
+        "pj":0
+    },
+    {
+        "seleccion":"Senegal",
+        "rankingFifa":1584,
+        "posicionRanking":18,
+        "grupo":"A",
+        "pg":0,
+        "pe":0,
+        "pp":0,
+        "ptos":0,
+        "pj":0
+    },
+    {
+        "seleccion":"Países Bajos",
+        "rankingFifa":1694,
+        "posicionRanking":8,
+        "grupo":"A",
+        "pg":0,
+        "pe":0,
+        "pp":0,
+        "ptos":0,
+        "pj":0
+    },
+    {
+        "seleccion":"Inglaterra",
+        "rankingFifa":1728,
+        "posicionRanking":5,
+        "grupo":"B",
+        "pg":0,
+        "pe":0,
+        "pp":0,
+        "ptos":0,
+        "pj":0
+    },
+    {
+        "seleccion":"Irán",
+        "rankingFifa":1564,
+        "posicionRanking":20,
+        "grupo":"B",
+        "pg":0,
+        "pe":0,
+        "pp":0,
+        "ptos":0,
+        "pj":0
+    },{
+        "seleccion":"USA",
+        "rankingFifa":1627,
+        "posicionRanking":16,
+        "grupo":"B",
+        "pg":0,
+        "pe":0,
+        "pp":0,
+        "ptos":0,
+        "pj":0
+    },
+    {
+        "seleccion":"Gales",
+        "rankingFifa":1569,
+        "posicionRanking":18,
+        "grupo":"B",
+        "pg":0,
+        "pe":0,
+        "pp":0,
+        "ptos":0,
+        "pj":0
+    },
+    {
+        "seleccion":"Argentina",
+        "rankingFifa":1773,
+        "posicionRanking":3,
+        "grupo":"C",
+        "pg":0,
+        "pe":0,
+        "pp":0,
+        "ptos":0,
+        "pj":0
+    },{
+        "seleccion":"Arabia Saudita",
+        "rankingFifa":1437,
+        "posicionRanking":51,
+        "grupo":"C",
+        "pg":0,
+        "pe":0,
+        "pp":0,
+        "ptos":0,
+        "pj":0
+    },
+    {
+        "seleccion":"México",
+        "rankingFifa":1644,
+        "posicionRanking":13,
+        "grupo":"C",
+        "pg":0,
+        "pe":0,
+        "pp":0,
+        "ptos":0,
+        "pj":0
+    },{
+        "seleccion":"Polonia",
+        "rankingFifa":1584,
+        "posicionRanking":26,
+        "grupo":"C",
+        "pg":0,
+        "pe":0,
+        "pp":0,
+        "ptos":0,
+        "pj":0
+    },
+    {
+        "seleccion":"Francia",
+        "rankingFifa":1759,
+        "posicionRanking":4,
+        "grupo":"D",
+        "pg":0,
+        "pe":0,
+        "pp":0,
+        "ptos":0,
+        "pj":0
+    },
+    {
+        "seleccion":"Australia",
+        "rankingFifa":1488,
+        "posicionRanking":38,
+        "grupo":"D",
+        "pg":0,
+        "pe":0,
+        "pp":0,
+        "ptos":0,
+        "pj":0
+    },
+    {
+        "seleccion":"Dinamarca",
+        "rankingFifa":1666,
+        "posicionRanking":10,
+        "grupo":"D",
+        "pg":0,
+        "pe":0,
+        "pp":0,
+        "ptos":0,
+        "pj":0
+    },{
+        "seleccion":"Tunez",
+        "rankingFifa":1507,
+        "posicionRanking":30,
+        "grupo":"D",
+        "pg":0,
+        "pe":0,
+        "pp":0,
+        "ptos":0,
+        "pj":0
+    },
+    {
+        "seleccion":"España",
+        "rankingFifa":1715,
+        "posicionRanking":7,
+        "grupo":"E",
+        "pg":0,
+        "pe":0,
+        "pp":0,
+        "ptos":0,
+        "pj":0
+    },{
+        "seleccion":"Costa Rica",
+        "rankingFifa":1503,
+        "posicionRanking":31,
+        "grupo":"E",
+        "pg":0,
+        "pe":0,
+        "pp":0,
+        "ptos":0,
+        "pj":0
+    },
+    {
+        "seleccion":"Alemania",
+        "rankingFifa":1650,
+        "posicionRanking":11,
+        "grupo":"E",
+        "pg":0,
+        "pe":0,
+        "pp":0,
+        "ptos":0,
+        "pj":0
+    },{
+        "seleccion":"Japón",
+        "rankingFifa":1559,
+        "posicionRanking":24,
+        "grupo":"E",
+        "pg":0,
+        "pe":0,
+        "pp":0,
+        "ptos":0,
+        "pj":0
+    },
+    {
+        "seleccion":"Belgica",
+        "rankingFifa":1816,
+        "posicionRanking":2,
+        "grupo":"F",
+        "pg":0,
+        "pe":0,
+        "pp":0,
+        "ptos":0,
+        "pj":0
+    },{
+        "seleccion":"Canada",
+        "rankingFifa":1475,
+        "posicionRanking":41,
+        "grupo":"F",
+        "pg":0,
+        "pe":0,
+        "pp":0,
+        "ptos":0,
+        "pj":0
+    },
+    {
+        "seleccion":"Marruecos",
+        "rankingFifa":1563,
+        "posicionRanking":22,
+        "grupo":"F",
+        "pg":0,
+        "pe":0,
+        "pp":0,
+        "ptos":0,
+        "pj":0
+    },{
+        "seleccion":"Croacia",
+        "rankingFifa":1645,
+        "posicionRanking":12,
+        "grupo":"F",
+        "pg":0,
+        "pe":0,
+        "pp":0,
+        "ptos":0,
+        "pj":0
+    },
+   {
+        "seleccion":"Brasil",
+        "rankingFifa":1841,
+        "posicionRanking":1,
+        "grupo":"G",
+        "pg":0,
+        "pe":0,
+        "pp":0,
+        "ptos":0,
+        "pj":0
+    },{
+        "seleccion":"Serbia",
+        "rankingFifa":1563,
+        "posicionRanking":21,
+        "grupo":"G",
+        "pg":0,
+        "pe":0,
+        "pp":0,
+        "ptos":0,
+        "pj":0
+    },
+    {
+        "seleccion":"Suiza",
+        "rankingFifa":1635,
+        "posicionRanking":15,
+        "grupo":"G",
+        "pg":0,
+        "pe":0,
+        "pp":0,
+        "ptos":0,
+        "pj":0
+    },{
+        "seleccion":"Camerun",
+        "rankingFifa":1471,
+        "posicionRanking":43,
+        "grupo":"G",
+        "pg":0,
+        "pe":0,
+        "pp":0,
+        "ptos":0,
+        "pj":0
+    },
+    {
+        "seleccion":"Portugal",
+        "rankingFifa":1676,
+        "posicionRanking":9,
+        "grupo":"H",
+        "pg":0,
+        "pe":0,
+        "pp":0,
+        "ptos":0,
+        "pj":0
+    },{
+        "seleccion":"Ghana",
+        "rankingFifa":1393,
+        "posicionRanking":61,
+        "grupo":"H",
+        "pg":0,
+        "pe":0,
+        "pp":0,
+        "ptos":0,
+        "pj":0
+    },
+    {
+        "seleccion":"Uruguay",
+        "rankingFifa":1638,
+        "posicionRanking":14,
+        "grupo":"H",
+        "pg":0,
+        "pe":0,
+        "pp":0,
+        "ptos":0,
+        "pj":0
+    },{
+        "seleccion":"Corea Del Sur",
+        "rankingFifa":1530,
+        "posicionRanking":28,
+        "grupo":"H",
+        "pg":0,
+        "pe":0,
+        "pp":0,
+        "ptos":0,
+        "pj":0
+    },
+]
+
+var grupos = [
+   [
+    {
+        "seleccion":"Qatar",
+        "rankingFifa":1439,
+        "posicionRanking":50
+    },
+    {
+        "seleccion":"Ecuador",
+        "rankingFifa":1464,
+        "posicionRanking":44
+    },
+    {
+        "seleccion":"Senegal",
+        "rankingFifa":1584,
+        "posicionRanking":18
+    },
+    {
+        "seleccion":"Países Bajos",
+        "rankingFifa":1694,
+        "posicionRanking":8
+    }
+    ],
+    [
+    {
+        "seleccion":"Inglaterra",
+        "rankingFifa":1728,
+        "posicionRanking":5
+    },
+    {
+        "seleccion":"Irán",
+        "rankingFifa":1564,
+        "posicionRanking":20
+    },{
+        "seleccion":"USA",
+        "rankingFifa":1627,
+        "posicionRanking":16
+    },
+    {
+        "seleccion":"Gales",
+        "rankingFifa":1569,
+        "posicionRanking":18
+    },
+]
+,[
+    {
+        "seleccion":"Argentina",
+        "rankingFifa":1773,
+        "posicionRanking":3
+    },{
+        "seleccion":"Arabia Saudita",
+        "rankingFifa":1437,
+        "posicionRanking":51
+    },
+    {
+        "seleccion":"México",
+        "rankingFifa":1644,
+        "posicionRanking":13
+    },{
+        "seleccion":"Polonia",
+        "rankingFifa":1584,
+        "posicionRanking":26
+    },
+]
+,[
+    {
+        "seleccion":"Francia",
+        "rankingFifa":1759,
+        "posicionRanking":4
+    },
+    {
+        "seleccion":"Australia",
+        "rankingFifa":1488,
+        "posicionRanking":38
+    },
+    {
+        "seleccion":"Dinamarca",
+        "rankingFifa":1666,
+        "posicionRanking":10
+    },{
+        "seleccion":"Tunez",
+        "rankingFifa":1507,
+        "posicionRanking":30
+    },
+]
+,[
+    {
+        "seleccion":"España",
+        "rankingFifa":1715,
+        "posicionRanking":7
+    },{
+        "seleccion":"Costa Rica",
+        "rankingFifa":1503,
+        "posicionRanking":31
+    },
+    {
+        "seleccion":"Alemania",
+        "rankingFifa":1650,
+        "posicionRanking":11
+    },{
+        "seleccion":"Japón",
+        "rankingFifa":1559,
+        "posicionRanking":24
+    },
+]
+,[
+    {
+        "seleccion":"Belgica",
+        "rankingFifa":1816,
+        "posicionRanking":2
+    },{
+        "seleccion":"Canada",
+        "rankingFifa":1475,
+        "posicionRanking":41
+    },
+    {
+        "seleccion":"Marruecos",
+        "rankingFifa":1563,
+        "posicionRanking":22
+    },{
+        "seleccion":"Croacia",
+        "rankingFifa":1645,
+        "posicionRanking":12
+    },
+]
+,[
+    {
+        "seleccion":"Brasil",
+        "rankingFifa":1841,
+        "posicionRanking":1
+    },{
+        "seleccion":"Serbia",
+        "rankingFifa":1563,
+        "posicionRanking":21
+    },
+    {
+        "seleccion":"Suiza",
+        "rankingFifa":1635,
+        "posicionRanking":15
+    },{
+        "seleccion":"Camerun",
+        "rankingFifa":1471,
+        "posicionRanking":43
+    },
+]
+,[
+    {
+        "seleccion":"Portugal",
+        "rankingFifa":1676,
+        "posicionRanking":9
+    },{
+        "seleccion":"Ghana",
+        "rankingFifa":1393,
+        "posicionRanking":61
+    },
+    {
+        "seleccion":"Uruguay",
+        "rankingFifa":1638,
+        "posicionRanking":14
+    },{
+        "seleccion":"Corea Del Sur",
+        "rankingFifa":1530,
+        "posicionRanking":28
+    },
+]
+]
+
+function partido(local,visitante){
+    //probar con elevear a la 3
+    //usando ranking por defecto: 
+    var coefDiferencias = 5;
+    var localPuntaje = Math.pow(local.rankingFifa,coefDiferencias);
+    var visitantePuntaje = Math.pow(visitante.rankingFifa,coefDiferencias);
+    var chancesGanarLocal = Math.round((localPuntaje*100)/(localPuntaje+visitantePuntaje));
+    var chancesGanarVisitante = Math.round((visitantePuntaje*100)/(localPuntaje+visitantePuntaje));
+    console.log('---------------------');
+    console.log(local.seleccion+ '-' + visitante.seleccion);
+    var resultado = Math.floor(Math.random()*(localPuntaje+visitantePuntaje));
+    console.log(resultado,'   ',localPuntaje+visitantePuntaje)
+    if(localPuntaje<resultado){
+        var ganador = local;
+    }else{
+        var ganador = visitante;
+    }
+    console.log(`Ganador=>${ganador.seleccion}`);
+    console.log(`Chances ${local.seleccion}: ${chancesGanarLocal}  Chances ${visitante.seleccion}: ${chancesGanarVisitante}`)
+}
+
+function partidoLiga(local,visitante){
+    var total = (local.rankingFifa*local.rankingFifa)+(visitante.rankingFifa*visitante.rankingFifa);
+    var winer = Math.floor(Math.random()*total);
+    //console.log(winer)
+    console.log(total)
+    if(winer<local.rankingFifa*local.rankingFifa){
+        local.pg++;
+        visitante.pp++;
+        local.pj++;
+        visitante.pj++
+    }else{
+        local.pp++;
+        visitante.pg++;
+        local.pj++;
+        visitante.pj++
+    }
+}
+
+//var totalPartidos = 0;
+//for(var i=0;i<selecciones.length;i++){
+//    for(var j=i+1;j<selecciones.length;j++){
+//        totalPartidos++;
+//        partidoLiga(selecciones[i],selecciones[j])
+//    }
+//}
+selecciones.sort((a,b)=>{
+    return a.rankingFifa - b.rankingFifa
+});
+console.log(selecciones)
+var totalPartidos = 0;
+for (var i = 0;i<grupos.length;i++){
+    for(var j=0;j<grupos[i].length;j++){
+        for(var k=j+1;k<grupos[i].length;k++){
+            totalPartidos++;
+            partido(grupos[i][j],grupos[i][k])
+        }
+    }
+}
+console.log(totalPartidos)
+
