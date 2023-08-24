@@ -8,7 +8,7 @@ function punto(levelP1,levelP2){
 }
 
 //Partido
-var gralStatics = {'puntosPlayerUno':0,'puntosPlayerDos': 0,'sets Uno':0,'sets Dos':0,'ganadosUno':0,'ganadosDos':0,'partidoMasPuntos':0}
+var gralStatics = {'puntosPlayerUno':0,'puntosPlayerDos': 0,'sets Uno':0,'sets Dos':0,'ganadosUno':0,'ganadosDos':0,'partidoMasPuntos':0,'partidoMasPuntosDetalle':[],'setMasPuntos':0,'setMasPuntosDetalle':[]}
 for (var t=0;t<100;t++){
     var playerUno = {
         'sets':0,
@@ -33,6 +33,10 @@ for (var t=0;t<100;t++){
             gralStatics["sets Dos"]+=playerDos.sets
             gralStatics.partidoMasPuntos<playerUno.puntosTotal+playerDos.puntosTotal?gralStatics.partidoMasPuntos=playerUno.puntosTotal+playerDos.puntosTotal:false
             playerUno.sets==4?gralStatics.ganadosUno++:gralStatics.ganadosDos++
+            if(gralStatics.partidoMasPuntos==playerUno.puntosTotal+playerDos.puntosTotal){
+                gralStatics.partidoMasPuntosDetalle = sets;
+            }
+            sets = [];
             break
         }
         for(var j=0;j<1000;j++){
@@ -42,6 +46,12 @@ for (var t=0;t<100;t++){
                 if(playerUno.puntos > playerDos.puntos +1){
                     playerUno.sets++
                     var set = {'P1':playerUno.puntos,'P2':playerDos.puntos}
+                    if(playerUno.puntos + playerDos.puntos > gralStatics.setMasPuntos){
+                        gralStatics.setMasPuntos = playerUno.puntos + playerDos.puntos;
+                        gralStatics.setMasPuntosDetalle = set;
+                    }
+                    sets.push(set)
+                    set = {};
                     playerUno.puntosTotal += playerUno.puntos
                     playerDos.puntosTotal += playerDos.puntos
                     playerUno.puntos = 0
@@ -53,6 +63,12 @@ for (var t=0;t<100;t++){
                 if(playerDos.puntos > playerUno.puntos+1){
                     playerDos.sets++
                     var set = {'P1':playerUno.puntos,'P2':playerDos.puntos}
+                    if(playerUno.puntos + playerDos.puntos > gralStatics.setMasPuntos){
+                        gralStatics.setMasPuntos = playerUno.puntos + playerDos.puntos;
+                        gralStatics.setMasPuntosDetalle = set;
+                    }
+                    sets.push(set);
+                    set = {};
                     playerUno.puntosTotal += playerUno.puntos
                     playerDos.puntosTotal += playerDos.puntos
                     playerDos.puntos = 0
@@ -63,7 +79,6 @@ for (var t=0;t<100;t++){
             }
             
         }
-        sets.push(set)
     }
     
 }
