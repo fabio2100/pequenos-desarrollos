@@ -31,11 +31,7 @@ def convierteDiasDosFechas(y1,m1,d1,y2,m2,d2):
         lenString +=1
     return binDiaResultado
 
-
-
-def globantEncoder(yearBirth=1901,monthBirth=1,dayBirth=1,yearPassport=1901,monthPassport=1,dayPassport=1):
-    # return string or binario or hexa with the data
-    # restricciones 
+def globantEncoder(yearBirth,monthBirth,dayBirth,yearPassport,monthPassport,dayPassport):
     try: 
         yearBirth = int(yearBirth)
         monthBirth = int(monthBirth)
@@ -44,22 +40,34 @@ def globantEncoder(yearBirth=1901,monthBirth=1,dayBirth=1,yearPassport=1901,mont
         monthPassport = int(monthPassport)
         dayPassport = int(dayPassport)
     except ValueError:
-        return print('Some value is not possible to convert in int')
+        return print('Some value is not possible to convert to int')
     if yearBirth < 1900 or yearBirth > 2023 or monthBirth < 1 or monthBirth > 12 or dayBirth < 1 or dayBirth > 31 or yearPassport < 1900 or yearPassport > 2023 or monthPassport < 1 or monthPassport > 12 or dayPassport < 1 or dayPassport > 31:
         raise ValueError('Some data is out of range')
+    if yearBirth > yearPassport or (yearBirth == yearPassport and monthBirth > monthPassport) or (yearBirth == yearPassport and monthBirth == monthPassport and dayBirth > dayPassport):
+        print('The date of birth should not be greater than the date of passport')
+    y1N=yearBirth-1900
+    y2N=yearPassport-1900
+    m1N=monthBirth-1
+    m2N=monthPassport-1
+    d1N=dayBirth-1
+    d2N=dayPassport-1
+    dia1Formateado=d1N+31*m1N+372*y1N
+    dia2Formateado=d2N+31*m2N+372*y2N
+    diaResultado=46128*dia2Formateado+dia1Formateado
+    binDiaResultado = bin(diaResultado)[2:]
+    lenString = len(binDiaResultado)
+    while lenString < 31:
+        binDiaResultado = '0'+binDiaResultado
+        lenString +=1
+    return binDiaResultado
 
-    #Aoa si 
-    #nro dia nacimiento (al igual q el dia de emisión, variará entre 1 y 31*12*124=46128)
-    #empezamos a contar desde el 1-1-1900 siendo este el dia 1 y asi sucesivamente hasta el 31-12-2023 q sera el 46128
-    convierteDias(yearBirth,monthBirth,dayBirth)
+
 
 def globantDecoder(encoded):
 
     #return (yearBirth, monthBirth, dayBirth, yearPassport, monthPassport, dayPassport, okBoolean)
     return 'hola mundi'
 
-
-#globantEncoder(yearBirth='2023')
 
 
 #nums = []
@@ -129,12 +137,21 @@ r = [1924,6,8,2005,7,16]
 
 print(r==decodeFunction(convierteDiasDosFechas(r[0],r[1],r[2],r[3],r[4],r[5])))
 
-for x in range(1900,2024):
-    for y in range(1,13):
-        for z in range(1,32):
-            for x1 in range(1900,2024):
-                for y1 in range(1,13):
-                    for z1 in range(1,32):
-                        if [x,y,z,x1,y1,z1] != decodeFunction(convierteDiasDosFechas(x,y,z,x1,y1,z1)):
-                            print('distinto',[x,y,z,x1,y1,z1])
+r = [1938,6,18,2012,7,25]
+
+print(r==decodeFunction(convierteDiasDosFechas(r[0],r[1],r[2],r[3],r[4],r[5])))
+
+
+r = [2009,6,8,2005,7,16]
+
+print(r==decodeFunction(convierteDiasDosFechas(r[0],r[1],r[2],r[3],r[4],r[5])))
+
+r = [1924,6,8,2005,7,16]
+
+print(r==decodeFunction(convierteDiasDosFechas(r[0],r[1],r[2],r[3],r[4],r[5])))
+
+print(globantEncoder(r[0],r[1],r[2],r[3],r[4],r[5]))
+print(globantEncoder(1900,1,2,1900,12,1))
+print(globantEncoder(1906,1,2,1900,12,1))
+
             
