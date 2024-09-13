@@ -46,4 +46,6 @@ const isPrime = (numero) => {
     return (primeCount * 100) / numero;
   }
 
-  console.log(percentajeOfPrimes(40000000))
+  const valor = 200000000
+  console.log(100/Math.log(valor))
+  console.log(percentajeOfPrimes(valor))
